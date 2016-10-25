@@ -1,6 +1,6 @@
 {
   "name": "load-as-fake-workers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {
     "minimatch": "^3.0.3"
