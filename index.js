@@ -22,20 +22,18 @@ exports.register = (globMatch, transform = x => x) => {
       class FakeWorker {
         constructor() {
           const self = this.self = {
-            postMessage: msg => process.nextTick(() => {
-              this.onmessage && this.onmessage({
-                data: JSON.stringify(msg)
-              });
+            postMessage: data => process.nextTick(() => {
+              this.onmessage && this.onmessage({ data });
             }),
           };
 
           ${transform(name)}
         }
 
-        postMessage(msg) {
+        postMessage(data) {
           process.nextTick(() => {
             if (this.self.onmessage) {
-              this.self.onmessage({ data: JSON.stringify(msg) });
+              this.self.onmessage({ data });
             }
           });
         }
