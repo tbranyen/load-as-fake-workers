@@ -1,0 +1,15 @@
+{
+  "name": "load-as-fake-workers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "minimatch": "^3.0.3"
+  },
+  "keywords": [
+    "web workers",
+    "testing"
+  ],
+  "author": "Tim Branyen (@tbranyen)",
+  "license": "MIT",
+  "description": "Loads scripts as fake workers for testing"
+}
